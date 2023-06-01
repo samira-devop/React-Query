@@ -1,14 +1,19 @@
-import './App.css';
-import { QueryClient, QueryClient, QueryClientProvider } from 'react-query';
-import { ReactQueryDevtools } from 'react-query-devtools';
-
-const QueryClient = new QueryClient({})
-function App() {
-  return (
-    <QueryClientProvider client={QueryClient}>
-  <ReactQueryDevtools initialIsOpen>{true}</ReactQueryDevtools>
-  </QueryClientProvider>
-  );
-}
-
-export default App;
+import { QueryClient, QueryClientProvider } from "react-query";
+  import { ReactQueryDevtools } from "react-query-devtools";
+ 
+  const queryClient = new QueryClient({});
+ 
+  const App = () => {
+    return (
+      <QueryClientProvider client={queryClient}>
+       
+ 
+        {/* The rest of your application */}
+ 
+        <ReactQueryDevtools initialIsOpen={true} />
+ 
+      </QueryClientProvider>
+    );
+  };
+ 
+  export default App;
